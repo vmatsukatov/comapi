@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseBotClient", "ClassLibrary1\BaseBotClient.csproj", "{B227CC2B-4971-409F-B8F5-B38F0935AA67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseBotCommander", "BotAPI\BaseBotCommander.csproj", "{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraAPICommander", "JiraBrainAPI\JiraAPICommander.csproj", "{A71B5473-52E9-48BA-B6CD-AEC41DBC61E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HipChatBotClient", "HipChatBot\HipChatBotClient.csproj", "{6383A162-B21C-4F7F-94B6-FC5BBF0125BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{5AD95E7C-4F37-4250-A7D3-1ABE93E1FB16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domains", "Domains\Domains.csproj", "{5D890A21-A3B3-4842-B07E-576D664C4001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataProviders", "DataProviders", "{E9496308-C51A-4851-8FC4-54A748F77F5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataRepository", "DataRepository\DataRepository.csproj", "{FB3A25CA-F638-4D72-9B53-1202838E1CE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B227CC2B-4971-409F-B8F5-B38F0935AA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B227CC2B-4971-409F-B8F5-B38F0935AA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B227CC2B-4971-409F-B8F5-B38F0935AA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B227CC2B-4971-409F-B8F5-B38F0935AA67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A71B5473-52E9-48BA-B6CD-AEC41DBC61E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A71B5473-52E9-48BA-B6CD-AEC41DBC61E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A71B5473-52E9-48BA-B6CD-AEC41DBC61E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A71B5473-52E9-48BA-B6CD-AEC41DBC61E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6383A162-B21C-4F7F-94B6-FC5BBF0125BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6383A162-B21C-4F7F-94B6-FC5BBF0125BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6383A162-B21C-4F7F-94B6-FC5BBF0125BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6383A162-B21C-4F7F-94B6-FC5BBF0125BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD95E7C-4F37-4250-A7D3-1ABE93E1FB16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD95E7C-4F37-4250-A7D3-1ABE93E1FB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD95E7C-4F37-4250-A7D3-1ABE93E1FB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD95E7C-4F37-4250-A7D3-1ABE93E1FB16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D890A21-A3B3-4842-B07E-576D664C4001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D890A21-A3B3-4842-B07E-576D664C4001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D890A21-A3B3-4842-B07E-576D664C4001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D890A21-A3B3-4842-B07E-576D664C4001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3A25CA-F638-4D72-9B53-1202838E1CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3A25CA-F638-4D72-9B53-1202838E1CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3A25CA-F638-4D72-9B53-1202838E1CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3A25CA-F638-4D72-9B53-1202838E1CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB3A25CA-F638-4D72-9B53-1202838E1CE5} = {E9496308-C51A-4851-8FC4-54A748F77F5F}
+	EndGlobalSection
+EndGlobal
