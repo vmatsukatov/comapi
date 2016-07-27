@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domains", "Domains\Domains.csproj", "{5D890A21-A3B3-4842-B07E-576D664C4001}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataProviders", "DataProviders", "{E9496308-C51A-4851-8FC4-54A748F77F5F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIClients", "APIClients", "{E9496308-C51A-4851-8FC4-54A748F77F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataRepository", "DataRepository\DataRepository.csproj", "{FB3A25CA-F638-4D72-9B53-1202838E1CE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraRestApiClient", "DataRepository\JiraRestApiClient.csproj", "{FB3A25CA-F638-4D72-9B53-1202838E1CE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
