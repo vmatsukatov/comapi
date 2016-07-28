@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseBotClient", "ClassLibrary1\BaseBotClient.csproj", "{B227CC2B-4971-409F-B8F5-B38F0935AA67}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseBotCommander", "BotAPI\BaseBotCommander.csproj", "{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraAPICommander", "JiraBrainAPI\JiraAPICommander.csproj", "{A71B5473-52E9-48BA-B6CD-AEC41DBC61E5}"
@@ -25,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B227CC2B-4971-409F-B8F5-B38F0935AA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B227CC2B-4971-409F-B8F5-B38F0935AA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B227CC2B-4971-409F-B8F5-B38F0935AA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B227CC2B-4971-409F-B8F5-B38F0935AA67}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5583E10-D0FC-4F92-9CD7-B0BBB47F2A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
