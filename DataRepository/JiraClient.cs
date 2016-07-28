@@ -81,24 +81,7 @@ namespace TechTalk.JiraRestClient
             return String.Join(" AND ", queryParts);
         }
 
-        [Obsolete("This method is no longer supported and might be removed in a later release. Use EnumerateIssuesByQuery(jqlQuery, fields, startIndex).ToArray() instead")]
-        public IEnumerable<Issue<TIssueFields>> GetIssuesByQuery(String projectKey, String issueType, String jqlQuery)
-        {
-            var jql = CreateCommonJql(projectKey, issueType);
-            if (!String.IsNullOrEmpty(jql) && !String.IsNullOrEmpty(jqlQuery))
-                jql += "+AND+";// if neither are empty, join them with an 'and'
-            return EnumerateIssuesByQuery(CreateCommonJql(projectKey, issueType), null, 0).ToArray();
-        }
-
-        [Obsolete("This method is no longer supported and might be removed in a later release. Use EnumerateIssuesByQuery(jqlQuery, fields, startIndex) instead")]
-        public IEnumerable<Issue<TIssueFields>> EnumerateIssues(String projectKey, String issueType, String fields)
-        {
-            var fieldDef = fields == null ? null
-                : fields.Split(',').Select(str => (str ?? "").Trim())
-                    .Where(str => !string.IsNullOrEmpty(str)).ToArray();
-            return EnumerateIssuesByQuery(CreateCommonJql(projectKey, issueType), fieldDef, 0);
-        }
-
+     
         public IEnumerable<Issue<TIssueFields>> EnumerateIssuesByQuery(String jqlQuery, String[] fields, Int32 startIndex)
         {
             try
@@ -656,6 +639,11 @@ namespace TechTalk.JiraRestClient
                 Trace.TraceError("GetServerInfo() error: {0}", ex);
                 throw new JiraClientException("Could not retrieve server information", ex);
             }
+        }
+
+        public IEnumerable<string> GetProjects()
+        {
+            throw new NotImplementedException();
         }
     }
 

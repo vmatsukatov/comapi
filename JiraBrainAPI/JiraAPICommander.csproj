@@ -40,8 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JiraProjectsService.cs" />
+    <Compile Include="JiraTasksService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataRepository\JiraRestApiClient.csproj">
+      <Project>{fb3a25ca-f638-4d72-9b53-1202838e1ce5}</Project>
+      <Name>JiraRestApiClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
