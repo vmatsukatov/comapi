@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace TechTalk.JiraRestClient
+namespace JiraRestClient
 {
     [Serializable]
     public class JiraClientException : Exception

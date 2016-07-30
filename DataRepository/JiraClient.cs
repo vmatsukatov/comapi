@@ -10,7 +10,7 @@ using System.Text;
 using RestSharp;
 using RestSharp.Deserializers;
 
-namespace TechTalk.JiraRestClient
+namespace JiraRestClient
 {
     //JIRA REST API documentation: https://docs.atlassian.com/jira/REST/latest
 
@@ -118,6 +118,19 @@ namespace TechTalk.JiraRestClient
                 if (resultCount < data.total) continue;
                 else /* all issues received */ break;
             }
+        }
+
+        private IEnumerable<Project> EnumerateProjectsInternal(string projectKey = "")
+        {
+            var path = String.Format("project{0}", projectKey.Trim() != string.Empty? string.Concat("/", projectKey):"");
+            var request = CreateRequest(Method.GET, path);
+
+            var response = ExecuteRequest(request);
+            AssertStatus(response, HttpStatusCode.OK);
+
+            var projects = deserializer.Deserialize<IEnumerable<Project>>(response);
+
+            foreach (var item in projects) yield return item;
         }
 
         public IQueryable<Issue<TIssueFields>> QueryIssues()
@@ -641,9 +654,10 @@ namespace TechTalk.JiraRestClient
             }
         }
 
-        public IEnumerable<string> GetProjects()
+        public IEnumerable<Project> GetAllProjects()
         {
-            throw new NotImplementedException();
+            var projects = EnumerateProjectsInternal();
+            return projects;
         }
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TechTalk.JiraRestClient;
+using JiraRestClient;
 using System.Collections.Specialized;
 
 namespace JiraAPICommander
@@ -21,6 +21,7 @@ namespace JiraAPICommander
         {
             //jiraClient.
             //jiraClient.GetIssues()
+            throw new NotImplementedException();
         }
     }
 }

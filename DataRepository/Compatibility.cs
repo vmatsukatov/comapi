@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace TechTalk.JiraRestClient
+namespace JiraRestClient
 {
     public interface IJiraClient
     {
@@ -111,17 +111,7 @@ namespace TechTalk.JiraRestClient
             return client.EnumerateIssues(projectKey, issueType).Select(Issue.From);
         }
 
-        [Obsolete("This method is no longer supported and might be removed in a later release.")]
-        public IEnumerable<Issue> GetIssuesByQuery(string projectKey, string issueType, string jqlQuery)
-        {
-            return client.GetIssuesByQuery(projectKey, issueType, jqlQuery).Select(Issue.From).ToArray();
-        }
-
-        [Obsolete("This method is no longer supported and might be removed in a later release.")]
-        public IEnumerable<Issue> EnumerateIssues(string projectKey, string issueType, string fields)
-        {
-            return client.EnumerateIssues(projectKey, issueType, fields).Select(Issue.From);
-        }
+       
 
         public Issue LoadIssue(String issueRef)
         {
@@ -246,6 +236,16 @@ namespace TechTalk.JiraRestClient
         public ServerInfo GetServerInfo()
         {
             return client.GetServerInfo();
+        }
+
+        public IEnumerable<Issue> GetIssuesByQuery(string projectKey, string issueType, string jqlQuery)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Issue> EnumerateIssues(string projectKey, string issueType, string fields)
+        {
+            throw new NotImplementedException();
         }
     }
 

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace TechTalk.JiraRestClient
+namespace JiraRestClient
 {
     public interface IJiraClient<TIssueFields> where TIssueFields : IssueFields, new()
     {
-        IEnumerable<string> GetProjects();
+        IEnumerable<Project> GetAllProjects();
         /// <summary>Returns all issues for the given project</summary>
         IEnumerable<Issue<TIssueFields>> GetIssues(String projectKey);
         /// <summary>Returns all issues of the specified type for the given project</summary>

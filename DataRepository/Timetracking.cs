@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace TechTalk.JiraRestClient
+namespace JiraRestClient
 {
     public class Timetracking
     {

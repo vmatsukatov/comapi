@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TechTalk.JiraRestClient
+namespace JiraRestClient
 {
     public class IssueRef
     {

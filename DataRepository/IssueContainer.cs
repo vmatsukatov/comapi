@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TechTalk.JiraRestClient
+namespace JiraRestClient
 {
     internal class IssueContainer<TIssueFields> where TIssueFields : IssueFields, new()
     {
