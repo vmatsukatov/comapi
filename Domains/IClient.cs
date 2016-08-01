@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domains
 {
-    public interface IProject
+    public interface IClient
     {
-        string id { get; set; }
-        string key { get; set; }
-        string name { get; set; }
-
+        IEnumerable<IProject> GetAllProjects();
     }
 }

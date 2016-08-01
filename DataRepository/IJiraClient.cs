@@ -79,5 +79,7 @@ namespace JiraRestClient
 
         /// <summary>Returns information about the JIRA server</summary>
         ServerInfo GetServerInfo();
+
+        
     }
 }

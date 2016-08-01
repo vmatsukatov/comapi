@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataRepository\JiraRestApiClient.csproj">
-      <Project>{fb3a25ca-f638-4d72-9b53-1202838e1ce5}</Project>
-      <Name>JiraRestApiClient</Name>
+    <ProjectReference Include="..\Domains\Domains.csproj">
+      <Project>{5d890a21-a3b3-4842-b07e-576d664c4001}</Project>
+      <Name>Domains</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
