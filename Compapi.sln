@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIClients", "APIClients", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraRestApiClient", "DataRepository\JiraRestApiClient.csproj", "{FB3A25CA-F638-4D72-9B53-1202838E1CE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{428D015B-DEEE-423B-9B0E-5EAC09989E45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{FB3A25CA-F638-4D72-9B53-1202838E1CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB3A25CA-F638-4D72-9B53-1202838E1CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB3A25CA-F638-4D72-9B53-1202838E1CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{428D015B-DEEE-423B-9B0E-5EAC09989E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428D015B-DEEE-423B-9B0E-5EAC09989E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428D015B-DEEE-423B-9B0E-5EAC09989E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428D015B-DEEE-423B-9B0E-5EAC09989E45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
