@@ -63,21 +63,35 @@ namespace JiraRestClient
 
         public IEnumerable<Issue<TIssueFields>> EnumerateIssues(String projectKey)
         {
-            return EnumerateIssuesByQuery(CreateCommonJql(projectKey, null), null, 0);
+            return EnumerateIssuesByQuery(CreateCommonJql(projectKey, null, null), null, 0);
         }
 
         public IEnumerable<Issue<TIssueFields>> EnumerateIssues(String projectKey, String issueType)
         {
-            return EnumerateIssuesByQuery(CreateCommonJql(projectKey, issueType), null, 0);
+            return EnumerateIssuesByQuery(CreateCommonJql(projectKey, issueType, null), null, 0);
         }
 
-        private static string CreateCommonJql(String projectKey, String issueType)
+        public IEnumerable<Issue<TIssueFields>> EnumerateIssues(String projectKey, String issueType, String issueStatus)
+        {
+            return EnumerateIssuesByQuery(CreateCommonJql(projectKey, issueType, issueStatus), null, 0);
+        }
+
+        private static string CreateCommonJql(String projectKey, String issueType, String issueStatus)
         {
             var queryParts = new List<String>();
             if (!String.IsNullOrEmpty(projectKey))
+            {
                 queryParts.Add(String.Format("project={0}", projectKey));
+            }
             if (!String.IsNullOrEmpty(issueType))
+            {
                 queryParts.Add(String.Format("issueType={0}", issueType));
+            }
+            if (!String.IsNullOrEmpty(issueStatus))
+            {
+                queryParts.Add(String.Format("status={0}", issueType));
+            }
+
             return String.Join(" AND ", queryParts);
         }
 

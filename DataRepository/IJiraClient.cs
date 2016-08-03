@@ -16,6 +16,8 @@ namespace JiraRestClient
         IEnumerable<Issue<TIssueFields>> EnumerateIssues(String projectKey);
         /// <summary>Enumerates through all issues of the specified type for the given project</summary>
         IEnumerable<Issue<TIssueFields>> EnumerateIssues(String projectKey, String issueType);
+        /// <summary>Enumerates through all issues of the specified type for the given project</summary>
+        IEnumerable<Issue<TIssueFields>> EnumerateIssues(String projectKey, String issueType, String issueStatus);
         /// <summary>Enumerates through all issues filtered by the specified jqlQuery starting form the specified startIndex</summary>
         IEnumerable<Issue<TIssueFields>> EnumerateIssuesByQuery(String jqlQuery, String[] fields, Int32 startIndex);
         /// <summary>Returns a query provider for this JIRA connection</summary>

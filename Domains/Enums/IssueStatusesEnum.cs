@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domains
+namespace Domains.Enums
 {
-    public interface IClient
+    public enum IssueStatusesEnum
     {
-        IEnumerable<IProject> GetAllProjects();
+        Open = 1,
+        InProgress,// = 2
+        Done //= 3
     }
 }

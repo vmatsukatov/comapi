@@ -40,14 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IClient.cs" />
-    <Compile Include="IProject.cs" />
-    <Compile Include="IStatus.cs" />
-    <Compile Include="IUser.cs" />
+    <Compile Include="Contracts\IClient.cs" />
+    <Compile Include="Contracts\IProject.cs" />
+    <Compile Include="Contracts\IStatus.cs" />
+    <Compile Include="Contracts\IUser.cs" />
+    <Compile Include="Enums\IssueStatusesEnum.cs" />
+    <Compile Include="IApplicationContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="IRelease.cs" />
-    <Compile Include="IIssue.cs" />
+    <Compile Include="Contracts\IRelease.cs" />
+    <Compile Include="Contracts\IIssue.cs" />
     <Compile Include="ViewModels\ProjectActivityViewModel.cs" />
+    <Compile Include="WebClientContext.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

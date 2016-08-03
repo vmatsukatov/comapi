@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domains
+namespace Domains.Contracts
 {
-    public interface IIssue
+    public interface IProject
     {
         string id { get; set; }
         string key { get; set; }
-        string summary { get; set; }
-        IStatus status { get; set; }
-        IUser assignee { get; set; }
+        string name { get; set; }
+
     }
 }

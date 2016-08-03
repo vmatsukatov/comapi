@@ -15,8 +15,10 @@ namespace JiraRestClient
         IEnumerable<Issue> EnumerateIssues(String projectKey);
         /// <summary>Enumerates through all issues of the specified type for the given project</summary>
         IEnumerable<Issue> EnumerateIssues(String projectKey, String issueType);
+        /// <summary>Enumerates through all issues of the specified type for the given project</summary>
+        IEnumerable<Issue> EnumerateIssues(String projectKey, String issueType, String issueStatus);
 
-       
+
         /// <summary>Returns the issue identified by the given ref</summary>
         Issue LoadIssue(String issueRef);
         /// <summary>Returns the issue identified by the given ref</summary>
@@ -107,7 +109,11 @@ namespace JiraRestClient
             return client.EnumerateIssues(projectKey, issueType).Select(Issue.From);
         }
 
-       
+        public IEnumerable<Issue> EnumerateIssues(String projectKey, String issueType, String issueStatus)
+        {
+            return client.EnumerateIssues(projectKey, issueType, issueStatus).Select(Issue.From);
+        }
+
 
         public Issue LoadIssue(String issueRef)
         {
@@ -238,12 +244,7 @@ namespace JiraRestClient
         {
             throw new NotImplementedException();
         }
-
-        public IEnumerable<Issue> EnumerateIssues(string projectKey, string issueType, string fields)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public IEnumerable<Project> GetAllProjects()
         {
             return client.GetAllProjects();

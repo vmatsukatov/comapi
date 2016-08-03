@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using System.Collections.Specialized;
 using Domains.ViewModels;
 using Domains;
+using Domains.Contracts;
 
 namespace JiraAPICommander
 {
     public class JiraTasksService
     {
         IClient jiraClient = null;
+        IApplicationContext appContext = null;
 
-        public JiraTasksService(IClient client)
+        public JiraTasksService(IClient client, IApplicationContext appContext)
         {
-            jiraClient = client;
+            this.jiraClient = client;
+            this.appContext = appContext;
         }
 
         public IEnumerable<ProjectActivityViewModel> GetInProgressTasksViewModels()
@@ -41,10 +44,14 @@ namespace JiraAPICommander
             
         }
 
-        private IEnumerable<IIssue> GetInProgressIssuesByProjectKey(string key)
+        private IEnumerable<IIssue> GetInProgressIssuesByProjectKey(string projectKey)
         {
-            throw new NotImplementedException();
+            IEnumerable<IIssue> issues = jiraClient.EnumerateIssues(projectKey, null, appContext.MappedIssueStatuses[Domains.Enums.IssueStatusesEnum.InProgress]);
+            return issues;
         }
+
+
+        
 
 
     }

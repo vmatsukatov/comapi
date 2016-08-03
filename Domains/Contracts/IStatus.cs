@@ -1,4 +1,4 @@
-﻿namespace Domains
+﻿namespace Domains.Contracts
 {
     public interface IStatus
     {
